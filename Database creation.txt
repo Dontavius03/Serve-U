@@ -1,0 +1,25 @@
+CREATE DATABASE `temp_for_demo` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+CREATE TABLE `demo` (
+  `UserID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Username` varchar(255) NOT NULL,
+  `FirstName` varchar(255) NOT NULL,
+  `LastName` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `Description` longtext,
+  PRIMARY KEY (`UserID`),
+  UNIQUE KEY `Username_UNIQUE` (`Username`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `demoorg` (
+  `Username` varchar(255) NOT NULL,
+  `OrgName` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `Description` longtext,
+  `OrgID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`OrgID`),
+  UNIQUE KEY `Username_UNIQUE` (`Username`),
+  UNIQUE KEY `OrgID_UNIQUE` (`OrgID`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
